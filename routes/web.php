@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ Route::get('/', function () {
 
     $user = User::find(1);
     $user->todo_list->tasks;
+
+    
 
     return $user;
 });

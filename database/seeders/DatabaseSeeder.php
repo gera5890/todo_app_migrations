@@ -27,7 +27,9 @@ class DatabaseSeeder extends Seeder
                     $task->users()->sync([
                         1,2,3
                     ]);
-                    Steps::factory(1)->create();
+                    Steps::factory(5)->create([
+                        'task_id' => $task->id
+                    ]);
                 });
             });
         });
